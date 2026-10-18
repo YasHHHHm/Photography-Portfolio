@@ -205,7 +205,14 @@
 /* ── Base ───────────────────────────────────────────────────────────────── */
 
 @layer base {
+  /* The page is always a scroll container, even when it is shorter than the
+     screen. WebKit (Safari) crashes the tab when a page transition goes from
+     a page that cannot scroll to one that can (e.g. the short Travel page to
+     the Blog on an iPad). Overlay scrollbars (macOS, iOS) show nothing; with
+     classic scrollbars, short and long pages now line up instead of shifting
+     sideways. */
   html {
+    overflow-y: scroll;
     background-color: var(--bg);
     color: var(--ink);
     -webkit-font-smoothing: antialiased;
@@ -284,10 +291,12 @@ img[data-state="loaded"] {
 
 /* Below-the-fold blocks: the browser skips their layout, paint and fonts
    until they come near the screen. "auto" remembers the real height once
-   seen, so scrolling back does not jump. */
+   seen, so scrolling back does not jump. Only the height is a placeholder:
+   the one-value `contain-intrinsic-size` also sets a 640 px width, which
+   stretched the one-column Home layout past the edge of a phone. */
 @utility defer-render {
   content-visibility: auto;
-  contain-intrinsic-size: auto 640px;
+  contain-intrinsic-block-size: auto 640px;
 }
 
 /* Visible only when focused: the first focusable element on every page. */
@@ -594,7 +603,11 @@ img[data-state="loaded"] {
     }
   }
 
-  /* Native <dialog> sheets (mobile menu, lightbox) fill the screen. */
+  /* Native <dialog> sheets (mobile menu, lightbox) fill the screen. They
+     always take taps: the floating navbar's header is pointer-events: none
+     (so only its pill catches clicks), and the menu sheet inside it would
+     inherit that and let every tap fall through to the page. A swipe that
+     reaches the sheet's edge never scrolls the page behind it. */
   .sheet {
     width: 100%;
     max-width: none;
@@ -605,6 +618,8 @@ img[data-state="loaded"] {
     border: 0;
     background: transparent;
     color: inherit;
+    pointer-events: auto;
+    overscroll-behavior: contain;
 
     &::backdrop {
       background: transparent;

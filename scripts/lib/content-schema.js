@@ -301,10 +301,10 @@ export const tripSchema = z
   .strictObject({
     $schema: z.string().optional(),
     title: text(40, "The trip title").describe(
-      'The destination, e.g. "Kerala". Shown on cards and in the corner tab.',
+      'The destination, e.g. "Kerala". Shown on cards, and in the home carousel\'s corner tab when "place" is empty.',
     ),
     place: optionalText.describe(
-      'Places within the trip, e.g. "Alleppey and Fort Kochi". Optional.',
+      'The town or places the trip was based in, e.g. "Alleppey and Fort Kochi". Shown in the home carousel\'s corner tab instead of the title. Optional.',
     ),
     dates: z
       .strictObject({

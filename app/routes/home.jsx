@@ -23,7 +23,8 @@ export const meta = (args) => {
   const site = siteFrom(args.matches);
   const data = /** @type {any} */ (args.loaderData);
   return seo(args, {
-    description: site?.bio ?? "",
+    // "Photographer & Videographer based in New Delhi, India. I photograph and film…"
+    description: site ? `${site.role} based in ${site.location}. ${site.bio}` : "",
     type: "profile",
     jsonLd: site ? [personLd(site, data?.profile?.avatar)] : [],
   });

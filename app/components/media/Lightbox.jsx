@@ -94,6 +94,14 @@ export default function Lightbox({ photos, index, trip, onIndex, onClose }) {
     if (returnFocus.current?.isConnected) returnFocus.current.focus();
   };
 
+  // Following the trip label (this trip's own page) closes the viewer. The
+  // scroll lock is lifted first: WebKit (Safari) crashes the tab when it is
+  // lifted during the page transition.
+  const follow = () => {
+    document.documentElement.style.overflow = "";
+    onClose();
+  };
+
   /** @param {number} step */
   const move = (step) => {
     if (index !== null) onIndex((index + step + count) % count);
@@ -200,7 +208,7 @@ export default function Lightbox({ photos, index, trip, onIndex, onClose }) {
                 {showInfo && (
                   <div className="flex max-w-3xl flex-col items-center gap-3">
                     {photo.caption && <p className="text-body-s">{photo.caption}</p>}
-                    <LabelChip label={trip.label} href={trip.href} tone="photo" />
+                    <LabelChip label={trip.label} href={trip.href} tone="photo" onClick={follow} />
                     {facts.length > 0 && (
                       <ul className="mono-label flex flex-wrap justify-center gap-x-4 gap-y-1">
                         {facts.map((fact) => (

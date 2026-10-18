@@ -9,10 +9,10 @@
       "type": "string",
       "minLength": 1,
       "maxLength": 40,
-      "description": "The destination, e.g. \"Kerala\". Shown on cards and in the corner tab."
+      "description": "The destination, e.g. \"Kerala\". Shown on cards, and in the home carousel's corner tab when \"place\" is empty."
     },
     "place": {
-      "description": "Places within the trip, e.g. \"Alleppey and Fort Kochi\". Optional.",
+      "description": "The town or places the trip was based in, e.g. \"Alleppey and Fort Kochi\". Shown in the home carousel's corner tab instead of the title. Optional.",
       "type": "string"
     },
     "dates": {

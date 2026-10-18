@@ -17,7 +17,7 @@ export const meta = (args) => {
   const name = siteFrom(args.matches)?.name ?? "";
   return seo(args, {
     title: page > 1 ? `Journal, page ${page}` : "Journal",
-    description: `Stories from the road by ${name}: the people, places and light behind the photographs.`,
+    description: `Stories from the road by ${name}: the people, places and light behind the photographs and films.`,
   });
 };
 

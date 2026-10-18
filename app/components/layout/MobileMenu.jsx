@@ -48,6 +48,14 @@ export default function MobileMenu({ open, onClose, name, site }) {
     if (returnFocus.current?.isConnected) returnFocus.current.focus();
   };
 
+  // Following a link: lift the scroll lock now, before the page transition
+  // starts. WebKit (Safari) crashes the tab when the lock is lifted during a
+  // view transition while this sheet is still fading out.
+  const follow = () => {
+    document.documentElement.style.overflow = "";
+    onClose();
+  };
+
   return (
     <MotionProvider>
       <dialog
@@ -70,7 +78,7 @@ export default function MobileMenu({ open, onClose, name, site }) {
               transition={{ duration: dur.base, ease: ease.out }}
             >
               <div className="flex items-center justify-between">
-                <Brand name={name} avatar={site.avatar} onClick={onClose} />
+                <Brand name={name} avatar={site.avatar} onClick={follow} />
                 <IconButton label="Close menu" tone="surface" onClick={onClose}>
                   <X aria-hidden="true" size={20} strokeWidth={1.75} />
                 </IconButton>
@@ -87,7 +95,7 @@ export default function MobileMenu({ open, onClose, name, site }) {
                     >
                       <AppLink
                         to={to}
-                        onClick={onClose}
+                        onClick={follow}
                         className="block py-1 font-display text-display-l"
                       >
                         {label}

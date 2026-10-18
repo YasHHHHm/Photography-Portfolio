@@ -1131,7 +1131,7 @@ export async function buildContent({ root = process.cwd(), dev = false, write = 
   const queues = trips.map((t) =>
     (t.featured.length ? t.featured : [t.cover]).map((photo) => ({ photo, trip: t })),
   );
-  /** @type {{ photo: PhotoRecord, trip: { title: string, label: string, href: string } }[]} */
+  /** @type {{ photo: PhotoRecord, trip: { title: string, place: string | null, label: string, href: string } }[]} */
   const hero = [];
   for (let round = 0; hero.length < heroCount && queues.some((q) => q.length > round); round++) {
     for (const queue of queues) {
@@ -1141,6 +1141,7 @@ export async function buildContent({ root = process.cwd(), dev = false, write = 
           photo: /** @type {PhotoRecord} */ (slide.photo),
           trip: {
             title: slide.trip.data.title,
+            place: slide.trip.data.place || null,
             label: slide.trip.label,
             href: tripSummary(slide.trip).href,
           },
@@ -1172,6 +1173,8 @@ export async function buildContent({ root = process.cwd(), dev = false, write = 
       contact: site.contact,
       notFoundPhoto: hero.at(-1)?.photo ?? null,
       ogImage: ogPath("/og/site.jpg"),
+      // npm run photos makes the site's social image from the About portrait.
+      ogImageAlt: portrait?.alt ?? null,
       year: new Date().getFullYear(),
     });
   }

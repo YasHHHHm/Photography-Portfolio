@@ -1,10 +1,10 @@
 {
   "name": "KRISH BHATIA",
-  "role": "Photographer",
-  "bio": "I photograph slow travel and the people who make places feel like home.",
+  "role": "Photographer & Videographer",
+  "bio": "I photograph and film the mountains, the stillness of nature and the little details most people miss.",
   "location": "New Delhi, India",
   "email": "krish0710bhatia@gmail.com",
-  "url": "https://{{DOMAIN}}",
+  "url": "https://krish-lenss.vercel.app",
   "avatar": "about/profile.jpg",
   "socials": [
     { "label": "Instagram", "url": "https://instagram.com/krish.lenss", "icon": "instagram" },

@@ -7,7 +7,8 @@
  *  - one progressive JPEG at 1600 px for browsers without AVIF
  *  - a tiny blurred placeholder and the dominant colour
  *  - camera settings from EXIF (GPS is never read; outputs carry no metadata)
- * plus a 1200 × 630 social image for each trip cover and post cover, and
+ * plus a 1200 × 630 social image for each trip cover and post cover (and one
+ * for the whole site from the About portrait), and
  * web-ready versions of every clip in a trip's videos/ folder (see
  * scripts/lib/videos.js).
  *
@@ -231,7 +232,9 @@ async function removeOutputs(group, stem) {
 // ── Social images ────────────────────────────────────────────────────────
 
 /**
- * 1200 × 630 crops for trip covers, post covers and the home page.
+ * 1200 × 630 crops for trip covers, post covers and the home page. The home
+ * page (and every page without its own cover) shows the photographer: the
+ * About portrait, or the newest trip's cover when there is no portrait.
  * @param {Map<string, string>} sourceHashes  "<source path>" → hash
  * @param {Record<string, any>} cache
  */
@@ -264,8 +267,11 @@ async function makeSocialImages(sourceHashes, cache) {
         : `${tripFolder(prefix) ?? "-"}${file}`;
     if (existsSync(source)) jobs.push({ target: `public/og/posts/${match[2]}.jpg`, source });
   }
+  const about = await readJson("content/about/about.json");
+  const portrait = typeof about?.portrait === "string" && `content/about/${about.portrait}`;
   const newest = trips.sort((a, b) => b.from.localeCompare(a.from))[0];
-  if (newest) jobs.push({ target: "public/og/site.jpg", source: newest.source });
+  const siteSource = portrait && existsSync(portrait) ? portrait : newest?.source;
+  if (siteSource) jobs.push({ target: "public/og/site.jpg", source: siteSource });
 
   let made = 0;
   for (const { target, source } of jobs) {

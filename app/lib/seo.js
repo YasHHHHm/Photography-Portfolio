@@ -13,7 +13,8 @@ import { fallbackUrl } from "./photo-url.js";
  * @property {string} location
  * @property {string} origin  e.g. "https://example.com" (no trailing slash)
  * @property {boolean} indexable  False on preview deployments
- * @property {string | null} ogImage
+ * @property {string | null} ogImage  The site's social image (the photographer's portrait)
+ * @property {string | null} ogImageAlt
  * @property {{ url: string }[]} socials
  */
 
@@ -31,7 +32,7 @@ export function siteFrom(matches) {
 }
 
 /**
- * "Kerala — Krish Bhatia", or "Krish Bhatia — Photographer" for Home.
+ * "Kerala — Krish Bhatia", or "Krish Bhatia — Photographer & Videographer" for Home.
  * @param {import("react-router").MetaArgs["matches"]} matches
  * @param {string} [title]
  */
@@ -89,7 +90,9 @@ export function seo({ matches, location }, input) {
   const title = pageTitle(matches, input.title);
   const path = location.pathname === "/" ? "/" : location.pathname.replace(/\/+$/, "");
   const url = absoluteUrl(site, path);
-  const image = input.image ?? site.ogImage;
+  // A page without its own social image shares the site's, with that image's alt text.
+  const image = input.image || site.ogImage;
+  const imageAlt = input.image ? input.imageAlt : site.ogImageAlt;
   const description = plainText(input.description);
 
   /** @type {import("react-router").MetaDescriptor[]} */
@@ -113,7 +116,7 @@ export function seo({ matches, location }, input) {
       { property: "og:image", content: src },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: input.imageAlt ?? title },
+      { property: "og:image:alt", content: imageAlt || title },
       { name: "twitter:image", content: src },
     );
   }

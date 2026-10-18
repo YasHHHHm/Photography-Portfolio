@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import { HERO_SLIDE_MS } from "../../lib/motion.js";
 import { useMediaQuery } from "../../lib/use-media-query.js";
 import { Navbar } from "../layout/Navbar.jsx";
-import { AppLink } from "../ui/AppLink.jsx";
 import { DotPagination } from "../ui/DotPagination.jsx";
 import { IconButton } from "../ui/IconButton.jsx";
 import { LabelChip } from "../ui/LabelChip.jsx";
@@ -16,13 +15,13 @@ const SWIPE_PX = 40;
 /**
  * @typedef {object} HeroSlide
  * @property {import("../../lib/photo-url.js").PhotoRecord} photo
- * @property {{ title: string, label: string, href: string }} trip
+ * @property {{ title: string, place: string | null, label: string, href: string }} trip
  */
 
 /**
  * The Home hero: featured photos crossfading every 6 seconds, with the
- * navbar in a notch at the top-left and the slide's trip in a notch at the
- * bottom-left. CSS does the motion (crossfade and slow zoom); this component
+ * navbar in a notch at the top-left and the slide's place (the trip's
+ * "place", or its title when there is none) in a notch at the bottom-left. CSS does the motion (crossfade and slow zoom); this component
  * only decides which slide is showing.
  *
  * - Slide 1 is the page's priority image. Slide 2 loads once the browser is
@@ -207,12 +206,14 @@ export function HeroCarousel({ slides, site }) {
         </>
       )}
 
+      {/* One chip naming where the slide was taken. It stops short of the
+          pause button on phones and of the dots above that, and a long place
+          ends in an ellipsis instead of running under the controls. */}
       {current && (
-        <div className="notch notch-bl flex max-w-1/2 items-center gap-3 pt-3 pr-4">
-          <AppLink to={current.trip.href} className="ghost-link truncate text-body-s font-medium">
-            {current.trip.title}
-          </AppLink>
-          <LabelChip label={current.trip.label} href={current.trip.href} className="hidden sm:inline-flex" />
+        <div className="notch notch-bl flex max-w-2/3 pt-3 pr-3 sm:max-w-1/2">
+          <LabelChip label={current.trip.label} href={current.trip.href}>
+            {current.trip.place ?? current.trip.title}
+          </LabelChip>
         </div>
       )}
 
