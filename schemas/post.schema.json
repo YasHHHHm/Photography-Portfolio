@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100,
+      "description": "The headline of the post."
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$",
+      "patternErrorMessage": "Write the date as YYYY-MM-DD, for example 2026-10-02.",
+      "examples": [
+        "2026-10-02"
+      ],
+      "description": "Publication date (YYYY-MM-DD). Newer posts appear first."
+    },
+    "excerpt": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200,
+      "description": "One or two sentences shown on cards and in search results."
+    },
+    "cover": {
+      "type": "string",
+      "pattern": "^(?:[a-z0-9]+(?:-[a-z0-9]+)*-\\d{4}|images)\\/[^/\\\\]+\\.(jpe?g|png|avif)$",
+      "patternErrorMessage": "Write it as \"kerala-2026/backwaters-01.jpg\" or \"images/map.jpg\"",
+      "examples": [
+        "kerala-2026/backwaters-01.jpg"
+      ],
+      "description": "The cover photo: \"trip-folder/file.jpg\" or \"images/file.jpg\"."
+    },
+    "labels": {
+      "default": [],
+      "description": "Trips this post belongs to, by folder name, e.g. [\"kerala-2026\"].",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*-\\d{4}$"
+      }
+    },
+    "featured": {
+      "default": false,
+      "description": "Show this post at the top of the blog.",
+      "type": "boolean"
+    },
+    "draft": {
+      "default": false,
+      "description": "Drafts appear in npm run dev only, never on the live site.",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "title",
+    "date",
+    "excerpt",
+    "cover"
+  ],
+  "additionalProperties": false,
+  "description": "A blog post. The text goes in post.md beside this file."
+}

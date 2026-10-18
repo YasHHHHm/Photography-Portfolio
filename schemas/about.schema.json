@@ -1,0 +1,85 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "headline": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "description": "One sentence under your name on the About page."
+    },
+    "portrait": {
+      "type": "string",
+      "pattern": "^[^/\\\\]+\\.(jpe?g|png|avif)$",
+      "patternErrorMessage": "A photo file name such as backwaters-01.jpg",
+      "examples": [
+        "backwaters-01.jpg"
+      ],
+      "description": "Your portrait's file name inside content/about/, e.g. portrait.jpg."
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 40,
+            "description": "e.g. \"Education\", \"Cameras\", \"Awards\"."
+          },
+          "items": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 80,
+                  "description": "The main line, e.g. a degree, camera or job."
+                },
+                "subtitle": {
+                  "description": "A muted line under the title. Optional.",
+                  "type": "string"
+                },
+                "meta": {
+                  "description": "A short note on the right, e.g. \"2022 – 2024\". Optional.",
+                  "type": "string"
+                },
+                "link": {
+                  "description": "A web address the item links to. Optional.",
+                  "type": "string",
+                  "examples": [
+                    "https://instagram.com/yourname"
+                  ]
+                }
+              },
+              "required": [
+                "title"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "title",
+          "items"
+        ],
+        "additionalProperties": false
+      },
+      "description": "Sections shown on the About page, in this order."
+    }
+  },
+  "required": [
+    "headline",
+    "portrait",
+    "sections"
+  ],
+  "additionalProperties": false,
+  "description": "The About page."
+}

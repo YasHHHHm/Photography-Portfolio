@@ -1,0 +1,3 @@
+# Cloudflare Pages redirects. Pages already serves /page.html at /page and
+# redirects /page/ to /page, so URLs have no trailing slash.
+# Add legacy URLs below as: /old-path /new-path 301

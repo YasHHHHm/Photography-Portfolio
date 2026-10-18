@@ -1,0 +1,54 @@
+# Quality gate (PRD section 9): runs on every pull request and on main.
+# Cloudflare Pages builds and deploys on its own; this job only checks.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: npm ci
+
+      - name: Lint and formatting
+        run: |
+          npm run lint
+          npm run format:check
+
+      - name: Content check
+        run: npm run check
+
+      - name: Build
+        run: npm run build
+
+      - name: JS and CSS budgets
+        run: npm run size
+
+      - name: Accessibility (axe, keyboard, reduced motion)
+        run: npm run a11y
+
+      - name: Lighthouse CI budgets
+        run: npm run lhci
+
+      - name: Keep the Lighthouse reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-reports
+          path: .lighthouseci/reports
+          if-no-files-found: ignore

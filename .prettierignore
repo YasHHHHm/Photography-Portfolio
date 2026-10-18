@@ -1,0 +1,11 @@
+build/
+.react-router/
+.generated/
+.cache/
+.lighthouseci/
+public/photos/
+public/og/
+media/
+schemas/
+package-lock.json
+PRD*.md

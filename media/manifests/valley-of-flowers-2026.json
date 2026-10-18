@@ -1,0 +1,145 @@
+{
+  "pipeline": 1,
+  "photos": [
+    {
+      "id": "valley-of-flowers-2026/camp-01",
+      "file": "camp-01.avif",
+      "label": "valley-of-flowers-2026",
+      "book": "uttarakhand",
+      "width": 4032,
+      "height": 3024,
+      "aspect": 1.3333,
+      "base": "/photos/valley-of-flowers-2026/camp-01-43e7213e",
+      "widths": [
+        480,
+        960,
+        1600,
+        2400
+      ],
+      "fallback": 1600,
+      "lqip": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADQAQCdASoQAAwAA4BaJZQAAloBrJJGAAD+BeAc/QLI54bDjAn6UYjNVKxupWVUEj9fP5/hDjDSrFMBfb7EUAAA",
+      "color": "#c8c8d8",
+      "hash": "43e7213e"
+    },
+    {
+      "id": "valley-of-flowers-2026/cloud-peak-01",
+      "file": "cloud-peak-01.avif",
+      "label": "valley-of-flowers-2026",
+      "book": "uttarakhand",
+      "width": 4032,
+      "height": 3024,
+      "aspect": 1.3333,
+      "base": "/photos/valley-of-flowers-2026/cloud-peak-01-9c970668",
+      "widths": [
+        480,
+        960,
+        1600,
+        2400
+      ],
+      "fallback": 1600,
+      "lqip": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAQCdASoQAAwAA4BaJZwAAsfi2KhCAAD+qZ10bWIShFByjnHzLgOSbxjdKMD3+TvexsDoSODP2LsTveoANter5QwridOQxX5tOB4AAAA=",
+      "color": "#585858",
+      "hash": "9c970668"
+    },
+    {
+      "id": "valley-of-flowers-2026/flower-meadow-01",
+      "file": "flower-meadow-01.avif",
+      "label": "valley-of-flowers-2026",
+      "book": "uttarakhand",
+      "width": 4284,
+      "height": 5712,
+      "aspect": 0.75,
+      "base": "/photos/valley-of-flowers-2026/flower-meadow-01-5ba4245c",
+      "widths": [
+        480,
+        960,
+        1600,
+        2400
+      ],
+      "fallback": 1600,
+      "lqip": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADwAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JYwDE2CHamk7T3jR/N3zQAP7nHkOQsrNwHLUGlYwT5oFEGUOWbKj70ZojIL9/F5WuQ1SE0s0JdPTTS9IUKznDDzNdkAkqgsE7UbjUGq5FyROn5HTqP86+3iGrsU0ZDaDEFMAA",
+      "color": "#d8d8d8",
+      "hash": "5ba4245c"
+    },
+    {
+      "id": "valley-of-flowers-2026/pink-balsam-01",
+      "file": "pink-balsam-01.avif",
+      "label": "valley-of-flowers-2026",
+      "book": "uttarakhand",
+      "width": 3024,
+      "height": 4032,
+      "aspect": 0.75,
+      "base": "/photos/valley-of-flowers-2026/pink-balsam-01-7c087e2c",
+      "widths": [
+        480,
+        960,
+        1600,
+        2400
+      ],
+      "fallback": 1600,
+      "lqip": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAADwBACdASoQABUAPu1iqU2ppaOiMAgBMB2JbAC7MoMYNc0QwG09NaFx+kASbKWiccAA9hVUwm2xzWebRwPvDuSQd+UBtXqsCPMTzg4YeTEXvGpaBqpJkolD4JaIfBjbD1hGLm6Qq0pb49Qt8m4Ku4odGwhO81r4l8lhe9+exLlcyed2dx16ZydgJ7REhzaUpsRDppFd00vea7xuAAA=",
+      "color": "#485828",
+      "hash": "7c087e2c"
+    },
+    {
+      "id": "valley-of-flowers-2026/rock-wall-01",
+      "file": "rock-wall-01.avif",
+      "label": "valley-of-flowers-2026",
+      "book": "uttarakhand",
+      "width": 4284,
+      "height": 5712,
+      "aspect": 0.75,
+      "base": "/photos/valley-of-flowers-2026/rock-wall-01-df333c0c",
+      "widths": [
+        480,
+        960,
+        1600,
+        2400
+      ],
+      "fallback": 1600,
+      "lqip": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JZQCdMoBnAA3ZrbdAcHA2gAD+gTXOT0gYiLUVPkhbsV5UuEchkLXTwc43YoUNvyz1RgmoNSu9vj0HT3A+vMYtcFu/jRIW9wd+75fSy221NxU/48X3CjZFu3huYW9khS7DWA8vhg0DAAAA",
+      "color": "#382828",
+      "hash": "df333c0c"
+    },
+    {
+      "id": "valley-of-flowers-2026/valley-01",
+      "file": "valley-01.avif",
+      "label": "valley-of-flowers-2026",
+      "book": "uttarakhand",
+      "width": 4284,
+      "height": 5712,
+      "aspect": 0.75,
+      "base": "/photos/valley-of-flowers-2026/valley-01-474afe4b",
+      "widths": [
+        480,
+        960,
+        1600,
+        2400
+      ],
+      "fallback": 1600,
+      "lqip": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADwAwCdASoQABUAPu1iqk4ppaQiMAgBMB2JZwAOcAPA3IBqUSjubSnAAP7fOwbF9RpF4EDbemT0fTgtyKrbHCOqxR94XK/Lb6vifwHwG/c7mxAjVskVAFebiibwrPSZKnAuSQwAAAA=",
+      "color": "#d8d8d8",
+      "hash": "474afe4b"
+    },
+    {
+      "id": "valley-of-flowers-2026/waterfall-01",
+      "file": "waterfall-01.avif",
+      "label": "valley-of-flowers-2026",
+      "book": "uttarakhand",
+      "width": 4284,
+      "height": 5712,
+      "aspect": 0.75,
+      "base": "/photos/valley-of-flowers-2026/waterfall-01-f2da2d93",
+      "widths": [
+        480,
+        960,
+        1600,
+        2400
+      ],
+      "fallback": 1600,
+      "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAACwAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JZQAAXKyl84iesjyXcAD+52KrTjEFxPFVo63+QcFkDoiIvEQA+rTYQtamcFWvqJp1m3IO9rfNOUBhQ/wtmRFyAAA=",
+      "color": "#c8c8d8",
+      "hash": "f2da2d93"
+    }
+  ]
+}

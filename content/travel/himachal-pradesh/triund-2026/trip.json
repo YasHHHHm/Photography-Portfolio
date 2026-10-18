@@ -1,0 +1,62 @@
+{
+  "title": "Triund",
+  "place": "Dharamshala",
+  "dates": { "from": "2026-06-01", "to": "" },
+  "summary": "Up through the cloud forest above Dharamshala to the Triund ridge, under the snow peaks of the Dhauladhar.",
+  "cover": "ridge-cow-01.avif",
+  "video": "flock-loop.mp4",
+  "featured": [
+    "ridge-cow-01.avif",
+    "dhauladhar-01.avif",
+    "half-point-01.avif",
+    "trail-01.avif",
+    "cloud-forest-01.avif",
+    "dhauladhar-02.avif"
+  ],
+  "tags": ["mountains", "trek", "clouds"],
+  "photos": {
+    "trail-01.avif": {
+      "caption": "Into the cloud on the trail",
+      "alt": "A hiker with a backpack stands on a rocky mountain trail, looking up into thick white cloud"
+    },
+    "half-point-01.avif": {
+      "caption": "Best View Half Point",
+      "alt": "A shaggy dog sits on a stone wall beside a Best View Half Point sign and prayer flags, cloud filling the valley below"
+    },
+    "market-mules-01.avif": {
+      "caption": "Pack mules in the market lane",
+      "alt": "Pack mules loaded with gas cylinders stand in a busy market lane in hazy sunlight"
+    },
+    "ridge-cow-01.avif": {
+      "caption": "On the Triund ridge",
+      "alt": "A brown cow walks along a grassy ridge in front of a bank of cloud, snowy peaks rising above it"
+    },
+    "cloud-forest-01.avif": {
+      "caption": "Cloud forest below the ridge",
+      "alt": "Mist drifting over steep mountain slopes covered in dense green forest"
+    },
+    "night-sky-01.avif": {
+      "caption": "Night over Triund",
+      "alt": "A dark night sky full of stars above a faint glow on the horizon"
+    },
+    "dhauladhar-01.avif": {
+      "caption": "The Dhauladhar above the cloud",
+      "alt": "Snow-streaked rocky peaks rising out of a sea of cloud under a blue sky"
+    },
+    "dhauladhar-02.avif": {
+      "caption": "The Dhauladhar up close",
+      "alt": "A steep granite peak with patches of snow against a clear blue sky"
+    }
+  },
+  "pinned": [
+    "trail-01.avif",
+    "half-point-01.avif",
+    "market-mules-01.avif",
+    "ridge-cow-01.avif",
+    "cloud-forest-01.avif",
+    "night-sky-01.avif",
+    "dhauladhar-01.avif",
+    "dhauladhar-02.avif"
+  ],
+  "hidden": []
+}

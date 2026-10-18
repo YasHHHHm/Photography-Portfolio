@@ -1,0 +1,216 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 60,
+      "description": "Your name, shown in the navbar, footer and page titles."
+    },
+    "role": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 60,
+      "description": "A few words under your name, e.g. \"Photographer\"."
+    },
+    "bio": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 400,
+      "description": "One short paragraph for the profile card on the home page.",
+      "examples": [
+        "I photograph slow travel and the people who make places feel like home."
+      ]
+    },
+    "location": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 60,
+      "description": "Where you are based, e.g. \"New Delhi, India\"."
+    },
+    "email": {
+      "type": "string",
+      "description": "Where contact messages and enquiries should go."
+    },
+    "url": {
+      "type": "string",
+      "examples": [
+        "https://instagram.com/yourname"
+      ],
+      "description": "The website's full address, e.g. https://example.com. Used for links shared on social media."
+    },
+    "avatar": {
+      "type": "string",
+      "pattern": "^(?:about|[a-z0-9]+(?:-[a-z0-9]+)*-\\d{4})\\/[^/\\\\]+\\.(jpe?g|png|avif)$",
+      "description": "The round photo on the home page and beside your name in the header, e.g. \"about/profile.jpg\". Use a square crop of your face."
+    },
+    "socials": {
+      "maxItems": 8,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 30,
+            "description": "Shown on the card, e.g. \"Instagram\"."
+          },
+          "url": {
+            "type": "string",
+            "examples": [
+              "https://instagram.com/yourname"
+            ],
+            "description": "The full address of your profile."
+          },
+          "icon": {
+            "type": "string",
+            "enum": [
+              "instagram",
+              "behance",
+              "x",
+              "youtube",
+              "linkedin",
+              "vimeo",
+              "flickr",
+              "tiktok",
+              "threads",
+              "facebook",
+              "pinterest",
+              "unsplash",
+              "website"
+            ],
+            "description": "Which brand icon to show."
+          }
+        },
+        "required": [
+          "label",
+          "url",
+          "icon"
+        ],
+        "additionalProperties": false
+      },
+      "description": "Social profiles, in the order they appear."
+    },
+    "home": {
+      "type": "object",
+      "properties": {
+        "heroCount": {
+          "default": 6,
+          "description": "How many photos rotate in the big home-page carousel.",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 12
+        },
+        "latestTrips": {
+          "default": 6,
+          "description": "How many trips the \"Latest travel\" section shows.",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 12
+        },
+        "books": {
+          "default": 4,
+          "description": "How many books the \"Books\" section shows.",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 12
+        },
+        "reel": {
+          "description": "A showreel card on the home page. Optional: remove it to hide the card.",
+          "type": "object",
+          "properties": {
+            "video": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*-\\d{4}\\/[^/\\\\]+\\.(mp4|mov|m4v)$",
+              "patternErrorMessage": "Write it as \"kerala-2026/backwaters-loop.mp4\"",
+              "examples": [
+                "kerala-2026/backwaters-loop.mp4"
+              ],
+              "description": "The clip that loops silently in the showreel card, e.g. \"delhi-2026/kites-loop.mp4\"."
+            },
+            "title": {
+              "description": "Shown on the card, e.g. \"Showreel 2026\". Optional.",
+              "type": "string"
+            },
+            "link": {
+              "description": "The full reel on YouTube or Vimeo. Optional: adds a “Watch the reel” button that plays it with sound.",
+              "type": "string",
+              "examples": [
+                "https://instagram.com/yourname"
+              ]
+            }
+          },
+          "required": [
+            "video"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false,
+      "description": "Home page settings."
+    },
+    "footer": {
+      "type": "object",
+      "properties": {
+        "marquee": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "description": "The slow moving line of text above the footer."
+        }
+      },
+      "required": [
+        "marquee"
+      ],
+      "additionalProperties": false,
+      "description": "Footer settings."
+    },
+    "contact": {
+      "type": "object",
+      "properties": {
+        "subjects": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 40
+          },
+          "description": "Choices in the contact form's subject menu."
+        },
+        "replyTime": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60,
+          "description": "Shown beside the form, e.g. \"Usually replies within 2 days\"."
+        }
+      },
+      "required": [
+        "subjects",
+        "replyTime"
+      ],
+      "additionalProperties": false,
+      "description": "Contact form settings."
+    }
+  },
+  "required": [
+    "name",
+    "role",
+    "bio",
+    "location",
+    "email",
+    "url",
+    "avatar",
+    "socials",
+    "home",
+    "footer",
+    "contact"
+  ],
+  "additionalProperties": false,
+  "description": "Your name, links and site-wide settings."
+}

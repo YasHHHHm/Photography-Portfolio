@@ -1,0 +1,25 @@
+{
+  "name": "KRISH BHATIA",
+  "role": "Photographer",
+  "bio": "I photograph slow travel and the people who make places feel like home.",
+  "location": "New Delhi, India",
+  "email": "krish0710bhatia@gmail.com",
+  "url": "https://{{DOMAIN}}",
+  "avatar": "about/profile.jpg",
+  "socials": [
+    { "label": "Instagram", "url": "https://instagram.com/krish.lenss", "icon": "instagram" },
+    { "label": "Behance", "url": "https://behance.net/cd739fb8", "icon": "behance" },
+    { "label": "LinkedIn", "url": "https://linkedin.com/in/{{HANDLE}}", "icon": "linkedin" }
+  ],
+  "home": {
+    "heroCount": 6,
+    "latestTrips": 6,
+    "books": 4,
+    "reel": { "video": "triund-2026/flock-loop.mp4", "title": "Triund, Himachal Pradesh" }
+  },
+  "footer": { "marquee": "Let's make something beautiful" },
+  "contact": {
+    "subjects": ["Commission", "Collaboration", "Prints", "Other"],
+    "replyTime": "Usually replies within 2 days"
+  }
+}

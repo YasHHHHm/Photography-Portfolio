@@ -1,0 +1,172 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 40,
+      "description": "The destination, e.g. \"Kerala\". Shown on cards and in the corner tab."
+    },
+    "place": {
+      "description": "Places within the trip, e.g. \"Alleppey and Fort Kochi\". Optional.",
+      "type": "string"
+    },
+    "dates": {
+      "type": "object",
+      "properties": {
+        "from": {
+          "type": "string",
+          "format": "date",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$",
+          "patternErrorMessage": "Write the date as YYYY-MM-DD, for example 2026-10-02.",
+          "examples": [
+            "2026-10-02"
+          ],
+          "description": "First day of the trip (YYYY-MM-DD)."
+        },
+        "to": {
+          "description": "Last day of the trip (YYYY-MM-DD). Optional: leave it empty for a one-day trip.",
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date",
+              "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$",
+              "patternErrorMessage": "Write the date as YYYY-MM-DD, for example 2026-10-02.",
+              "examples": [
+                "2026-10-02"
+              ]
+            },
+            {
+              "type": "string",
+              "const": ""
+            }
+          ]
+        }
+      },
+      "required": [
+        "from"
+      ],
+      "additionalProperties": false,
+      "description": "When the trip happened. Newer trips appear first everywhere."
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200,
+      "description": "One or two sentences. Used on cards and in search results."
+    },
+    "cover": {
+      "type": "string",
+      "pattern": "^[^/\\\\]+\\.(jpe?g|png|avif)$",
+      "patternErrorMessage": "A photo file name such as backwaters-01.jpg",
+      "examples": [
+        "backwaters-01.jpg"
+      ],
+      "description": "The photo used on cards and at the top of the trip page."
+    },
+    "video": {
+      "description": "A clip from videos/ that plays silently behind the trip title, e.g. backwaters-loop.mp4. Optional; 8 to 15 seconds works best.",
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[^/\\\\]+\\.(mp4|mov|m4v)$",
+          "patternErrorMessage": "A clip file name such as backwaters-loop.mp4",
+          "examples": [
+            "backwaters-loop.mp4"
+          ]
+        },
+        {
+          "type": "string",
+          "const": ""
+        }
+      ]
+    },
+    "featured": {
+      "default": [],
+      "description": "Photos that may appear in the home-page carousel.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[^/\\\\]+\\.(jpe?g|png|avif)$",
+        "patternErrorMessage": "A photo file name such as backwaters-01.jpg",
+        "examples": [
+          "backwaters-01.jpg"
+        ]
+      }
+    },
+    "tags": {
+      "default": [],
+      "description": "Theme words, e.g. \"monsoon\", \"boats\".",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "photos": {
+      "default": {},
+      "description": "Captions and alt text, keyed by file name. Alt text is required for the cover and featured photos.",
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "pattern": "^[^/\\\\]+\\.(jpe?g|png|avif)$",
+        "patternErrorMessage": "A photo file name such as backwaters-01.jpg",
+        "examples": [
+          "backwaters-01.jpg"
+        ]
+      },
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "caption": {
+            "description": "Shown under the photo in the lightbox. Optional.",
+            "type": "string"
+          },
+          "alt": {
+            "description": "Describe the photo for people who cannot see it, as if telling a friend over the phone.",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "pinned": {
+      "default": [],
+      "description": "Photos shown first, in this order. The rest follow by capture time.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[^/\\\\]+\\.(jpe?g|png|avif)$",
+        "patternErrorMessage": "A photo file name such as backwaters-01.jpg",
+        "examples": [
+          "backwaters-01.jpg"
+        ]
+      }
+    },
+    "hidden": {
+      "default": [],
+      "description": "Photos kept but not shown on the site.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[^/\\\\]+\\.(jpe?g|png|avif)$",
+        "patternErrorMessage": "A photo file name such as backwaters-01.jpg",
+        "examples": [
+          "backwaters-01.jpg"
+        ]
+      }
+    }
+  },
+  "required": [
+    "title",
+    "dates",
+    "summary",
+    "cover"
+  ],
+  "additionalProperties": false,
+  "description": "A trip: one visit to one destination."
+}

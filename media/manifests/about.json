@@ -1,0 +1,41 @@
+{
+  "pipeline": 1,
+  "photos": [
+    {
+      "id": "about/portrait",
+      "file": "portrait.jpg",
+      "width": 3072,
+      "height": 3840,
+      "aspect": 0.8,
+      "base": "/photos/about/portrait-420f0cba",
+      "widths": [
+        480,
+        960,
+        1600,
+        2400
+      ],
+      "fallback": 1600,
+      "lqip": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAACQAwCdASoQABQAPu1iqU2ppaOiMAgBMB2JQBWABDrEz+ot3kmAAP7Dkeiv34FBq/XSiQxFD6ZkEY0AAUe1CXI7ijtT6aDxUVlgW9V8VOqs8MVOnxDT7X3RLAun4VibgoTzwAAA",
+      "color": "#b8c8c8",
+      "hash": "420f0cba"
+    },
+    {
+      "id": "about/profile",
+      "file": "profile.jpg",
+      "width": 2220,
+      "height": 2220,
+      "aspect": 1,
+      "base": "/photos/about/profile-cfc405b2",
+      "widths": [
+        480,
+        960,
+        1600,
+        2220
+      ],
+      "fallback": 1600,
+      "lqip": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAQAgCdASoQABAAA4BaJbACdADJsOZfug6AAP7ddh/I1h7U6GaCTueRTiviit4bvuux+9f3bapVH1IgYOqGTYnA6c4W4ntIxsNLXiXHo+Y3meX/6oITCltSTOlBl9tiFtP5ku/y4+zUi4YT6FplevAA",
+      "color": "#181808",
+      "hash": "cfc405b2"
+    }
+  ]
+}

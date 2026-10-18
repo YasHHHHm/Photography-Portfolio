@@ -1,0 +1,34 @@
+{
+  "headline": "Travel and documentary photographer based in New Delhi.",
+  "portrait": "portrait.jpg",
+  "sections": [
+    {
+      "title": "Education",
+      "items": [
+        { "title": "M.A. Photography", "subtitle": "{{GRAD_UNIVERSITY}}", "meta": "2022 – 2024" },
+        {
+          "title": "B.A. Visual Communication",
+          "subtitle": "{{UNDERGRAD_COLLEGE}}",
+          "meta": "2018 – 2021"
+        }
+      ]
+    },
+    {
+      "title": "Cameras",
+      "items": [
+        { "title": "Sony A7 IV", "subtitle": "Main body", "meta": "Since 2023" },
+        { "title": "Fujifilm X100V", "subtitle": "Street and travel" }
+      ]
+    },
+    {
+      "title": "Work",
+      "items": [
+        { "title": "{{STUDIO_OR_CLIENT}}", "subtitle": "Staff photographer", "meta": "2024 – now" }
+      ]
+    },
+    {
+      "title": "Hobbies",
+      "items": [{ "title": "Film developing", "subtitle": "Ilford HP5 in the kitchen sink" }]
+    }
+  ]
+}

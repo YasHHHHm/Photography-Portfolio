@@ -1,0 +1,36 @@
+# Dependencies and build output
+node_modules/
+build/
+.react-router/
+.generated/
+.cache/
+.lighthouseci/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Original photos and videos stay on the photographer's machine.
+# Only the optimised files in public/photos/ and media/manifests/ are committed.
+content/**/*.jpg
+content/**/*.jpeg
+content/**/*.JPG
+content/**/*.JPEG
+content/**/*.png
+content/**/*.PNG
+content/**/*.avif
+content/**/*.AVIF
+content/**/*.heic
+content/**/*.HEIC
+content/**/*.tif
+content/**/*.tiff
+content/**/*.mp4
+content/**/*.MP4
+content/**/*.mov
+content/**/*.MOV
+
+# OS and editor clutter
+.DS_Store
+Thumbs.db
+*.log

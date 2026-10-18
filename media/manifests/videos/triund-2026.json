@@ -1,0 +1,59 @@
+{
+  "pipeline": 2,
+  "videos": [
+    {
+      "id": "triund-2026/flock-loop",
+      "file": "flock-loop.mp4",
+      "label": "triund-2026",
+      "book": "himachal-pradesh",
+      "hash": "ff555875",
+      "base": "/videos/triund-2026/flock-loop-ff555875",
+      "width": 1920,
+      "height": 1080,
+      "aspect": 1.7778,
+      "duration": 2.9,
+      "renditions": [
+        {
+          "size": 720,
+          "codec": "h264",
+          "type": "video/mp4; codecs=\"avc1.64001f\"",
+          "bytes": 1314380
+        },
+        {
+          "size": 720,
+          "codec": "av1",
+          "type": "video/mp4; codecs=\"av01.0.05M.08\"",
+          "bytes": 865785
+        },
+        {
+          "size": 1080,
+          "codec": "h264",
+          "type": "video/mp4; codecs=\"avc1.640028\"",
+          "bytes": 2652304
+        },
+        {
+          "size": 1080,
+          "codec": "av1",
+          "type": "video/mp4; codecs=\"av01.0.08M.08\"",
+          "bytes": 1714642
+        }
+      ],
+      "poster": {
+        "width": 1920,
+        "height": 1080,
+        "aspect": 1.7778,
+        "base": "/videos/triund-2026/flock-loop-ff555875-poster",
+        "widths": [
+          480,
+          960,
+          1600,
+          1920
+        ],
+        "fallback": 1600,
+        "lqip": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAkAA4BaJZQC7AEQcV2i/wAA/uoxVS0Cew8/Lv4HPj/Rnmd2aJWBBu9uJqAmdh5UaejsZ5W+NNvQt8q3tLpz7XgshJ4AAAA=",
+        "color": "#384838"
+      },
+      "darkStart": false
+    }
+  ]
+}

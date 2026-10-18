@@ -1,0 +1,70 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.exclude": {
+    "**/.react-router": true
+  },
+  "search.exclude": {
+    "build": true,
+    ".generated": true,
+    "public/photos": true,
+    "media": true
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "cSpell.words": [
+    "Alleppey",
+    "Arashiyama",
+    "Biei",
+    "Chamoli",
+    "Dhauladhar",
+    "Dharamshala",
+    "Higashiyama",
+    "Hokkaido",
+    "Kochi",
+    "Mehrauli",
+    "Otaru",
+    "Triund",
+    "Uttarakhand",
+    "Vembanad",
+    "avif",
+    "exifr",
+    "fontaine",
+    "fontsource",
+    "houseboat",
+    "lqip",
+    "mozjpeg",
+    "prerender",
+    "prerendered"
+  ],
+  "json.schemas": [
+    {
+      "fileMatch": ["**/content/site.json"],
+      "url": "./schemas/site.schema.json"
+    },
+    {
+      "fileMatch": ["**/content/about/about.json"],
+      "url": "./schemas/about.schema.json"
+    },
+    {
+      "fileMatch": ["**/content/travel/*/book.json"],
+      "url": "./schemas/book.schema.json"
+    },
+    {
+      "fileMatch": ["**/content/travel/*/*/trip.json"],
+      "url": "./schemas/trip.schema.json"
+    },
+    {
+      "fileMatch": ["**/content/blog/*/post.json"],
+      "url": "./schemas/post.schema.json"
+    }
+  ],
+  "files.readonlyInclude": {
+    "public/photos/**": true,
+    "media/**": true,
+    ".generated/**": true
+  }
+}

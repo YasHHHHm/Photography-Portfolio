@@ -1,0 +1,50 @@
+{
+  "title": "Valley of Flowers",
+  "place": "Chamoli",
+  "dates": { "from": "2026-09-01", "to": "" },
+  "summary": "September in the Valley of Flowers: meadows in bloom, waterfalls, and cloud sitting low on every ridge.",
+  "cover": "valley-01.avif",
+  "video": "",
+  "featured": ["valley-01.avif", "flower-meadow-01.avif", "waterfall-01.avif", "rock-wall-01.avif"],
+  "tags": ["flowers", "trek", "monsoon"],
+  "photos": {
+    "waterfall-01.avif": {
+      "caption": "A waterfall out of the cloud",
+      "alt": "A thin waterfall threads down a steep green mountainside, its top lost in thick cloud"
+    },
+    "camp-01.avif": {
+      "caption": "Camp below the cloud",
+      "alt": "Rows of white and green tents on a grassy slope below a forested mountain wrapped in cloud"
+    },
+    "pink-balsam-01.avif": {
+      "caption": "Wild balsam after the rain",
+      "alt": "Pink balsam flowers with raindrops on their stems among green leaves"
+    },
+    "rock-wall-01.avif": {
+      "caption": "Under the rock wall",
+      "alt": "A hiker with a backpack stands on a boulder beneath a towering, overhanging rock wall"
+    },
+    "valley-01.avif": {
+      "caption": "Into the Valley of Flowers",
+      "alt": "A meadow of small white flowers leading into a valley between dark cliffs, cloud filling the gap"
+    },
+    "flower-meadow-01.avif": {
+      "caption": "A seat among the flowers",
+      "alt": "A person in a checked shirt sits on a rock in a meadow of tall white flowers below misty green hills"
+    },
+    "cloud-peak-01.avif": {
+      "caption": "Cloud over the peaks",
+      "alt": "Cloud pours over a dark mountain peak under a grey sky"
+    }
+  },
+  "pinned": [
+    "waterfall-01.avif",
+    "camp-01.avif",
+    "pink-balsam-01.avif",
+    "rock-wall-01.avif",
+    "valley-01.avif",
+    "flower-meadow-01.avif",
+    "cloud-peak-01.avif"
+  ],
+  "hidden": []
+}

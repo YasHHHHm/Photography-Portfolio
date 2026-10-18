@@ -1,0 +1,164 @@
+{
+  "pipeline": 1,
+  "photos": [
+    {
+      "id": "triund-2026/cloud-forest-01",
+      "file": "cloud-forest-01.avif",
+      "label": "triund-2026",
+      "book": "himachal-pradesh",
+      "width": 2033,
+      "height": 1133,
+      "aspect": 1.7944,
+      "base": "/photos/triund-2026/cloud-forest-01-78afabd1",
+      "widths": [
+        480,
+        960,
+        1600,
+        2033
+      ],
+      "fallback": 1600,
+      "lqip": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADwAQCdASoQAAkAA4BaJZQC/ODp4nmf6OAA/vIWzFv/FFG7jBFcO0bb/7S/MLm8+nRT6B4iPkgAAA==",
+      "color": "#f8f8f8",
+      "hash": "78afabd1"
+    },
+    {
+      "id": "triund-2026/dhauladhar-01",
+      "file": "dhauladhar-01.avif",
+      "label": "triund-2026",
+      "book": "himachal-pradesh",
+      "width": 2031,
+      "height": 1127,
+      "aspect": 1.8021,
+      "base": "/photos/triund-2026/dhauladhar-01-ecaf773b",
+      "widths": [
+        480,
+        960,
+        1600,
+        2031
+      ],
+      "fallback": 1600,
+      "lqip": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACwAQCdASoQAAkAA4BaJQBOgCBaoMvgAM29kVTkP/b83BsAayqUFXkazx3B3AAA",
+      "color": "#888898",
+      "hash": "ecaf773b"
+    },
+    {
+      "id": "triund-2026/dhauladhar-02",
+      "file": "dhauladhar-02.avif",
+      "label": "triund-2026",
+      "book": "himachal-pradesh",
+      "width": 4644,
+      "height": 3096,
+      "aspect": 1.5,
+      "base": "/photos/triund-2026/dhauladhar-02-1512022a",
+      "widths": [
+        480,
+        960,
+        1600,
+        2400
+      ],
+      "fallback": 1600,
+      "lqip": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAABQAQCdASoQAAsAA4BaJQBOgAQoANIRLQAGVZWEfgQq4IoBRrPHw9NEJAA=",
+      "color": "#7888a8",
+      "hash": "1512022a"
+    },
+    {
+      "id": "triund-2026/half-point-01",
+      "file": "half-point-01.avif",
+      "label": "triund-2026",
+      "book": "himachal-pradesh",
+      "width": 2028,
+      "height": 1084,
+      "aspect": 1.8708,
+      "base": "/photos/triund-2026/half-point-01-862698fe",
+      "widths": [
+        480,
+        960,
+        1600,
+        2028
+      ],
+      "fallback": 1600,
+      "lqip": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQAAkAA4BaJZwAAuPoH4CYAAD7ISYJ4kBlYVda/IqYgagNDRSKi1/JLhZ7sYUH864AMAQxjWk1TnWbvDOUeg74AAA=",
+      "color": "#98a8b8",
+      "hash": "862698fe"
+    },
+    {
+      "id": "triund-2026/market-mules-01",
+      "file": "market-mules-01.avif",
+      "label": "triund-2026",
+      "book": "himachal-pradesh",
+      "width": 1470,
+      "height": 825,
+      "aspect": 1.7818,
+      "base": "/photos/triund-2026/market-mules-01-e08a166d",
+      "widths": [
+        480,
+        960,
+        1470
+      ],
+      "fallback": 1470,
+      "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoQAAkAA4BaJZQCdAC3avl1gAD2thFACT9f3YKOw4EvPYR2TB6nPiypYRc5mzre3B5Or5r1DOhALmi1/cAAAA==",
+      "color": "#585858",
+      "hash": "e08a166d"
+    },
+    {
+      "id": "triund-2026/night-sky-01",
+      "file": "night-sky-01.avif",
+      "label": "triund-2026",
+      "book": "himachal-pradesh",
+      "width": 3024,
+      "height": 4032,
+      "aspect": 0.75,
+      "base": "/photos/triund-2026/night-sky-01-ee9ce35c",
+      "widths": [
+        480,
+        960,
+        1600,
+        2400
+      ],
+      "fallback": 1600,
+      "lqip": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAABQAwCdASoQABUAPu1iqU26JaOiMAgDQB2JZwDE2C0YodMPwAD+8KBfIu/y1K463hXcsWIUlx2IAAAA",
+      "color": "#080808",
+      "hash": "ee9ce35c"
+    },
+    {
+      "id": "triund-2026/ridge-cow-01",
+      "file": "ridge-cow-01.avif",
+      "label": "triund-2026",
+      "book": "himachal-pradesh",
+      "width": 2018,
+      "height": 1129,
+      "aspect": 1.7874,
+      "base": "/photos/triund-2026/ridge-cow-01-32429bca",
+      "widths": [
+        480,
+        960,
+        1600,
+        2018
+      ],
+      "fallback": 1600,
+      "lqip": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAAAQAgCdASoQAAkAA4BaJQBOgB8xq3/lrn4AAP3Zbf87aFelQb9Z4bGiTV36bq8Vssbq7U+rkpR+Pwtm6AA=",
+      "color": "#98a8b8",
+      "hash": "32429bca"
+    },
+    {
+      "id": "triund-2026/trail-01",
+      "file": "trail-01.avif",
+      "label": "triund-2026",
+      "book": "himachal-pradesh",
+      "width": 4644,
+      "height": 3096,
+      "aspect": 1.5,
+      "base": "/photos/triund-2026/trail-01-c1ea091d",
+      "widths": [
+        480,
+        960,
+        1600,
+        2400
+      ],
+      "fallback": 1600,
+      "lqip": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQAAsAA4BaJYwAAl0hLQbCaYAA+VtgTkP6P7RdIOMQjuUaZAfzgw7I55vWLe7paBtFNc6lQmmTRsCyx/4HIf4FgAA=",
+      "color": "#a8a8a8",
+      "hash": "c1ea091d"
+    }
+  ]
+}
